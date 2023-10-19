@@ -104,7 +104,7 @@ vi .pub copy
 
 远程仓库 git remote add origin git@github.com:1531183110/remote-repo.git
 查看远程的仓库 git remote -v
-指定分支的为main it branch -M main
+指定分支的为 main it branch -M main
 关联本地与远程推送 git push -u origin master
 拉取远程仓库自动合并 git pull origin master
 拉取远程仓库手动合并 git fetch
@@ -125,8 +125,20 @@ u updated -已更新未合并
 
 
 <!-- 分支 -->
-branch
+git branch 查看分支
+创建分支 git branch dev
+切换分支 git switch dev
+合并分支 git merge dev
+删除分支 :
+[已合#I $ git branch -d branch-name
+[未合并I $ git branch -D branch-name
+恢复文件 git checkout 文件名
+
 后来查百度又执行下面语句后成功在本地同步了readme文件
 git pull --rebase origin master
 //本地生成ReadMe 文件之后再次提交，还是报这个错，再次百度，最后执行下面这条命令，意思是可以允许不相关历史提交，强制合并
 git pull origin masterallow-unrelated-histories
+
+
+
+修改参数
