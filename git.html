@@ -17,7 +17,6 @@
 进入.git cd .git
 查看.git文件下重要组成部分 ls -altr
 
-克隆服务器仓库 git clone http://zhangning@117.34.54.50:19899/r/Arsc/ProductionMnageAdmin.git （拉代码到本地）
 
 查看文件文件状态 git status 查看本地仓库状态，比较常用的指令，加参数-s简洁模式
 查看文件内容 cat file1.txt
@@ -61,13 +60,14 @@ rm file2.txt
 git status
 git add . (暂存区file2.txt删除)
 git ls-files"（暂存区文件查看）"
-git rm file2.txt
+git rm file2.txt"（同时删除）"
 git rm --chached other.log(删除版本库-.log提交不生效)
 删除后记得提交 git commit -m "delete file2.txt and file2.txt"
 
 
 
 https://www.bilibili.com/video/BV1HM411377j/?p=9&spm_id_from=pageDriver&vd_source=7c207823f7598639bc6053259b551601
+https://git-scm.com/docs/gitignore
 忽略文件 .gitignore
 创建文件 echo "some log" > access.log
 创建文件 echo "other log" > other.log
@@ -78,7 +78,51 @@ https://www.bilibili.com/video/BV1HM411377j/?p=9&spm_id_from=pageDriver&vd_sourc
 查看变化 git diff
 删除.log 文件
 
+创建文件夹 mkdir temp
+git status -s
+echo "hello" > temp/hello.txt
 
 git status""查看仓库的状态"
 ls "工作区"
 git ls-files "暂存区"
+
+
+<!-- 远程仓库 -->
+https://github.com/
+1、注册github name:1531183110 email:1531183110@qq.com p:bs
+2、使用管理
+创建仓库:https://github.com/1531183110/remote-repo
+克隆服务器仓库 git clone http://zhangning@117.34.54.50:19899/r/Arsc/ProductionMnageAdmin.git （拉代码到本地）
+git clone git@github.com:1531183110/remote-repo.git
+ssh配置密钥
+cd .ssh
+ssh-keygen -t rsa(协议) -b 4096(大小) 回车-回车（第一次） test 输入密码
+查看本地目录： ls -ltr
+vi .pub copy
+头像-settings-
+
+
+远程仓库 git remote add origin git@github.com:1531183110/remote-repo.git
+查看远程的仓库 git remote -v
+指定分支的为main it branch -M main
+关联本地与远程推送 git push -u origin master
+拉取远程仓库自动合并 git pull origin master
+拉取远程仓库手动合并 git fetch
+拉取pull
+推送push
+
+<!-- 托管 -->
+gitee gitlab
+https://www.bilibili.com/video/BV1HM411377j?p=14&vd_source=7c207823f7598639bc6053259b551601
+
+git打开vscode到当前目录 code .
+?? untracked -未跟踪
+m modified -已修改
+a added -已添加暂存
+d deleted -已删除
+r renamed -重命名
+u updated -已更新未合并
+
+
+<!-- 分支 -->
+Branch
